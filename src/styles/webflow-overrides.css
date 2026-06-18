@@ -1,1 +1,21 @@
 /* Webflow class fixes and migration overrides will live here. */
+.nav-menu.is-open {
+  display: block;
+}
+
+.dropdown-list.is-open {
+  display: block;
+}
+
+.dropdown-toggle {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+}
+
+.menu-button {
+  border: 0;
+}
