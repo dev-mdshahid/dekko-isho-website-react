@@ -23,7 +23,7 @@ const pageLinks = [
   { label: 'Privacy Policy', to: '/privacy-policy' },
 ]
 
-function isActive(pathname, to) {
+function isActive(pathname: string, to: string) {
   if (to === '/') {
     return pathname === '/' || pathname === '/index'
   }
@@ -35,11 +35,11 @@ export default function Navbar() {
   const { pathname } = useLocation()
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isPagesOpen, setIsPagesOpen] = useState(false)
-  const dropdownRef = useRef(null)
+  const dropdownRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    function handleOutsideClick(event) {
-      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+    function handleOutsideClick(event: MouseEvent) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
         setIsPagesOpen(false)
       }
     }

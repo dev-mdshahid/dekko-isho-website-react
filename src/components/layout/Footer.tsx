@@ -31,7 +31,7 @@ const socialLinks = [
   { label: 'Instagram', href: 'https://www.instagram.com/', icon: instagramIcon, alt: 'social-icon' },
 ]
 
-function isActive(pathname, to) {
+function isActive(pathname: string, to: string) {
   if (to === '/') {
     return pathname === '/' || pathname === '/index'
   }
@@ -65,7 +65,7 @@ export default function Footer() {
                   >
                     <input
                       className="form-input form-input-subscribe w-input"
-                      maxLength="256"
+                      maxLength={256}
                       name="Email"
                       data-name="Email"
                       placeholder="Enter your email"
